@@ -81,8 +81,8 @@
     "keybindings": [
       {
         "command": "turboConsoleLog.displayLogMessage",
-        "key": "ctrl+alt+l",
-        "mac": "ctrl+alt+l"
+        "key": "ctrl+alt+d",
+        "mac": "ctrl+alt+d"
       },
       {
         "command": "turboConsoleLog.commentAllLogMessages",
