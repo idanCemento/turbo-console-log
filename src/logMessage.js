@@ -37,14 +37,14 @@ function message(
   );
   const spacesBeforeMsg: string = spaces(document, lineOfSelectedVar, tabSize);
   const semicolon: string = addSemicolonInTheEnd ? ";" : "";
-  const debuggingMsg: string = `console.log(${quote}${logMessagePrefix}${
+  const debuggingMsg: string = `console.debugLog(${quote}${logMessagePrefix}${
     logMessagePrefix.length !== 0 ? ": " : ""
   }${insertEnclosingClass ? classThatEncloseTheVar : ""}${
     insertEnclosingFunction ? funcThatEncloseTheVar : ""
   }${selectedVar}${quote}, ${selectedVar})${semicolon}`;
   if (wrapLogMessage) {
-    // 16 represents the length of console.log("");
-    const wrappingMsg: string = `console.log(${quote}${logMessagePrefix}: ${"-".repeat(
+    // 16 represents the length of console.debugLog("");
+    const wrappingMsg: string = `console.debugLog(${quote}${logMessagePrefix}: ${"-".repeat(
       debuggingMsg.length - 16
     )}${quote})${semicolon}`;
     return `${

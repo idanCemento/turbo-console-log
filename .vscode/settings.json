@@ -2,5 +2,10 @@
     "git.ignoreLimitWarning": true,
     "cSpell.words": [
         "flowtype"
-    ]
+    ],
+    "workbench.colorCustomizations": {
+        "activityBar.background": "#01361C",
+        "titleBar.activeBackground": "#014B27",
+        "titleBar.activeForeground": "#ECFFF6"
+    }
 }
