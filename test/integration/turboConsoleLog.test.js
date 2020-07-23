@@ -29,7 +29,7 @@ describe("Turbo Console Log", () => {
       )
     ];
     await vscode.commands.executeCommand(
-      "turboConsoleLog.displayLogMessage",
+      "turboConsoleDebugLog.displayLogMessage",
       []
     );
     const textDocument = activeTextEditor.document;
@@ -46,7 +46,7 @@ describe("Turbo Console Log", () => {
       )
     ];
     await vscode.commands.executeCommand(
-      "turboConsoleLog.displayLogMessage",
+      "turboConsoleDebugLog.displayLogMessage",
       []
     );
     const textDocument = activeTextEditor.document;
@@ -63,7 +63,7 @@ describe("Turbo Console Log", () => {
       )
     ];
     await vscode.commands.executeCommand(
-      "turboConsoleLog.displayLogMessage",
+      "turboConsoleDebugLog.displayLogMessage",
       []
     );
     const textDocument = activeTextEditor.document;
@@ -83,7 +83,7 @@ describe("Turbo Console Log", () => {
         )
       ];
       await vscode.commands.executeCommand(
-        "turboConsoleLog.displayLogMessage",
+        "turboConsoleDebugLog.displayLogMessage",
         []
       );
       const textDocument = activeTextEditor.document;
@@ -107,7 +107,7 @@ describe("Turbo Console Log", () => {
         )
       ];
       await vscode.commands.executeCommand(
-        "turboConsoleLog.displayLogMessage",
+        "turboConsoleDebugLog.displayLogMessage",
         []
       );
       const textDocument = activeTextEditor.document;
@@ -131,7 +131,7 @@ describe("Turbo Console Log", () => {
         )
       ];
       await vscode.commands.executeCommand(
-        "turboConsoleLog.displayLogMessage",
+        "turboConsoleDebugLog.displayLogMessage",
         []
       );
       const textDocument = activeTextEditor.document;

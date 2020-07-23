@@ -1,8 +1,8 @@
 {
-  "name": "turbo-console-log",
-  "displayName": "Turbo Console Log",
+  "name": "turbo-console-debuglog",
+  "displayName": "Turbo Console debugLog",
   "description": "Automating the process of writing meaningful log messages.",
-  "version": "1.4.0",
+  "version": "1.4.2",
   "publisher": "ChakrounAnas",
   "engines": {
     "vscode": "^1.19.0"
@@ -12,43 +12,43 @@
   ],
   "icon": "images/icon.png",
   "activationEvents": [
-    "onCommand:turboConsoleLog.displayLogMessage",
-    "onCommand:turboConsoleLog.commentAllLogMessages",
-    "onCommand:turboConsoleLog.uncommentAllLogMessages",
-    "onCommand:turboConsoleLog.deleteAllLogMessages"
+    "onCommand:turboConsoleDebugLog.displayLogMessage",
+    "onCommand:turboConsoleDebugLog.commentAllLogMessages",
+    "onCommand:turboConsoleDebugLog.uncommentAllLogMessages",
+    "onCommand:turboConsoleDebugLog.deleteAllLogMessages"
   ],
-  "main": "./build/turboConsoleLog",
+  "main": "./build/turboConsoleDebugLog",
   "contributes": {
     "configuration": {
       "type": "object",
       "title": "Turbo Console Log Configuration",
       "properties": {
-        "turboConsoleLog.wrapLogMessage": {
+        "turboConsoleDebugLog.wrapLogMessage": {
           "type": "boolean",
           "default": false,
           "description": "Determine if the log message should be wrapped or not."
         },
-        "turboConsoleLog.logMessagePrefix": {
+        "turboConsoleDebugLog.logMessagePrefix": {
           "type": "string",
           "default": "",
           "description": "The prefix of the log message."
         },
-        "turboConsoleLog.addSemicolonInTheEnd": {
+        "turboConsoleDebugLog.addSemicolonInTheEnd": {
           "type": "boolean",
           "default": false,
           "description": "Whether to add or not a semicolon in the end of the log message."
         },
-        "turboConsoleLog.insertEnclosingClass": {
+        "turboConsoleDebugLog.insertEnclosingClass": {
           "type": "boolean",
           "default": true,
           "description": "Whether to insert or not the enclosing class of the selected variable in the log message."
         },
-        "turboConsoleLog.insertEnclosingFunction": {
+        "turboConsoleDebugLog.insertEnclosingFunction": {
           "type": "boolean",
           "default": true,
           "description": "Whether to insert or not the enclosing function of the selected variable in the log message."
         },
-        "turboConsoleLog.quote": {
+        "turboConsoleDebugLog.quote": {
           "type": "string",
           "enum": [
             "\"",
@@ -62,40 +62,40 @@
     },
     "commands": [
       {
-        "command": "turboConsoleLog.displayLogMessage",
+        "command": "turboConsoleDebugLog.displayLogMessage",
         "title": "Turbo Console Log: Display Log Message"
       },
       {
-        "command": "turboConsoleLog.commentAllLogMessages",
+        "command": "turboConsoleDebugLog.commentAllLogMessages",
         "title": "Turbo Console Log: Comment All Log Messages"
       },
       {
-        "command": "turboConsoleLog.uncommentAllLogMessages",
+        "command": "turboConsoleDebugLog.uncommentAllLogMessages",
         "title": "Turbo Console Log: Uncomment All Log Messages"
       },
       {
-        "command": "turboConsoleLog.deleteAllLogMessages",
+        "command": "turboConsoleDebugLog.deleteAllLogMessages",
         "title": "Turbo Console Log: Delete All Log Messages"
       }
     ],
     "keybindings": [
       {
-        "command": "turboConsoleLog.displayLogMessage",
+        "command": "turboConsoleDebugLog.displayLogMessage",
         "key": "ctrl+alt+d",
         "mac": "ctrl+alt+d"
       },
       {
-        "command": "turboConsoleLog.commentAllLogMessages",
+        "command": "turboConsoleDebugLog.commentAllLogMessages",
         "key": "alt+shift+c",
         "mac": "alt+shift+c"
       },
       {
-        "command": "turboConsoleLog.uncommentAllLogMessages",
+        "command": "turboConsoleDebugLog.uncommentAllLogMessages",
         "key": "alt+shift+u",
         "mac": "alt+shift+u"
       },
       {
-        "command": "turboConsoleLog.deleteAllLogMessages",
+        "command": "turboConsoleDebugLog.deleteAllLogMessages",
         "key": "alt+shift+d",
         "mac": "alt+shift+d"
       }

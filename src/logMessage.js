@@ -366,8 +366,8 @@ function detectAll(
   const documentNbrOfLines: number = document.lineCount;
   const logMessages: LogMessage[] = [];
   for (let i = 0; i < documentNbrOfLines; i++) {
-    const turboConsoleLogMessage: RegExp = /console\.log\(('|"|`).*/;
-    if (turboConsoleLogMessage.test(document.lineAt(i).text)) {
+    const turboConsoleDebugLogMessage: RegExp = /console\.log\(('|"|`).*/;
+    if (turboConsoleDebugLogMessage.test(document.lineAt(i).text)) {
       const logMessage: LogMessage = {
         lines: []
       };

@@ -10,7 +10,7 @@ import type { LogMessage, ExtensionProperties } from "./Types";
  */
 function activate(context: vscode.ExtensionContext) {
   vscode.commands.registerCommand(
-    "turboConsoleLog.displayLogMessage",
+    "turboConsoleDebugLog.displayLogMessage",
     async () => {
       const editor: vscode.TextEditor = vscode.window.activeTextEditor;
       if (!editor) {
@@ -19,7 +19,7 @@ function activate(context: vscode.ExtensionContext) {
       const tabSize: number = editor.options.tabSize;
       const document: vscode.TextDocument = editor.document;
       const config: vscode.WorkspaceConfiguration = vscode.workspace.getConfiguration(
-        "turboConsoleLog"
+        "turboConsoleDebugLog"
       );
       const properties: ExtensionProperties = extensionProperties(config);
       for (let index = 0; index < editor.selections.length; index++) {
@@ -60,7 +60,7 @@ function activate(context: vscode.ExtensionContext) {
     }
   );
   vscode.commands.registerCommand(
-    "turboConsoleLog.commentAllLogMessages",
+    "turboConsoleDebugLog.commentAllLogMessages",
     () => {
       const editor: vscode.TextEditor = vscode.window.activeTextEditor;
       if (!editor) {
@@ -69,7 +69,7 @@ function activate(context: vscode.ExtensionContext) {
       const tabSize: number = editor.options.tabSize;
       const document: vscode.TextDocument = editor.document;
       const config: vscode.WorkspaceConfiguration = vscode.workspace.getConfiguration(
-        "turboConsoleLog"
+        "turboConsoleDebugLog"
       );
       const properties: ExtensionProperties = extensionProperties(config);
       const logMessages: LogMessage[] = logMessage.detectAll(
@@ -92,7 +92,7 @@ function activate(context: vscode.ExtensionContext) {
     }
   );
   vscode.commands.registerCommand(
-    "turboConsoleLog.uncommentAllLogMessages",
+    "turboConsoleDebugLog.uncommentAllLogMessages",
     () => {
       const editor: vscode.TextEditor = vscode.window.activeTextEditor;
       if (!editor) {
@@ -101,7 +101,7 @@ function activate(context: vscode.ExtensionContext) {
       const tabSize: number = editor.options.tabSize;
       const document: vscode.TextDocument = editor.document;
       const config: vscode.WorkspaceConfiguration = vscode.workspace.getConfiguration(
-        "turboConsoleLog"
+        "turboConsoleDebugLog"
       );
       const properties: ExtensionProperties = extensionProperties(config);
       const logMessages: LogMessage[] = logMessage.detectAll(
@@ -126,7 +126,7 @@ function activate(context: vscode.ExtensionContext) {
     }
   );
   vscode.commands.registerCommand(
-    "turboConsoleLog.deleteAllLogMessages",
+    "turboConsoleDebugLog.deleteAllLogMessages",
     () => {
       const editor: vscode.TextEditor = vscode.window.activeTextEditor;
       if (!editor) {
@@ -135,7 +135,7 @@ function activate(context: vscode.ExtensionContext) {
       const tabSize: number = editor.options.tabSize;
       const document: vscode.TextDocument = editor.document;
       const config: vscode.WorkspaceConfiguration = vscode.workspace.getConfiguration(
-        "turboConsoleLog"
+        "turboConsoleDebugLog"
       );
       const properties: ExtensionProperties = extensionProperties(config);
       const logMessages: LogMessage[] = logMessage.detectAll(
